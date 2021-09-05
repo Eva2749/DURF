@@ -1,7 +1,8 @@
 body,html {
   height:100%;
   margin: 0;
-  font-family: 'Oswald';
+  /* font-family: 'Oswald'; */
+  font-family: 'PT Sans Narrow', sans-serif;
   font-weight: 400;
 }
 

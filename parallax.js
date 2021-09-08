@@ -10,14 +10,28 @@ var createImg5 = false;
 var createImg6 = false;
 var createImg7 = false;
 var createImg8 = false;
+var createbg1 = false;
+var createbg2 = false;
+var createbg3 = false;
+
 
 var welpic = document.getElementById('welpic1');
+
+//background paper container
+var backBox1 = document.getElementById("backBox1");
+var backBox2 = document.getElementById("backBox2");
+var backBox3 = document.getElementById("backBox3");
+
+var textsec1 = document.getElementsByClassName('textsec1')[0];
+var textsec2 = document.getElementsByClassName('textsec2')[0];
+var textsec3 = document.getElementsByClassName('textsec3')[0];
 
 //text in section 1
 var title1 = document.getElementById('title1');
 var sec1text1 = document.getElementById('sec1text1');
 var sec1text2 = document.getElementById('sec1text2');
 var sec1text3 = document.getElementById('sec1text3');
+var sec1text3b = document.getElementById('sec1text3b');
 var sec1text4 = document.getElementById('sec1text4');
 
 var layer0 = document.getElementsByClassName('layer-0')[0];
@@ -39,7 +53,7 @@ window.onscroll = function(){
   //select scroll position
   var scrollY = document.documentElement.scrollTop;
   var picY = Math.max(scrollY, 0)
-  console.log("nowY is " + scrollY);
+  console.log("nowY is " + picY + "px in Y");
   //make the welcome image bigger when scrolling
   if (picY>0 && picY<1000) {
     welpic.style.width = picY + "px";
@@ -60,11 +74,18 @@ window.onscroll = function(){
       audio2.pause();
       audio3.pause();
       // playing1 = true;
-      console.log("audio1 playing");
   } else if (scrollY > 1260 && scrollY < 2530){
     //create an image and make the image moving effect
     //create image1
     //but only once
+     if (createbg1 == false) {
+       const bg1 = document.createElement("img");
+       bg1.src = "images/oldpaper3.png";
+       bg1.className = "bg1";
+       backBox1.appendChild(bg1);
+       createbg1 = true;
+     }
+
      if (createImg1 == false) {
        const img1 = document.createElement("img");
        img1.src = "images/woman_sit.png";
@@ -74,7 +95,6 @@ window.onscroll = function(){
      }
      //image1 moving effect
      layer0.style.top = 300+ picY*0.8 + "px";
-     console.log("it's" + picY + "px");
 
      //create image2
      if (createImg2 == false) {
@@ -83,38 +103,54 @@ window.onscroll = function(){
        img2.className = "img2";
        layer1.appendChild(img2);
        createImg2 = true;
-       console.log("img2 created");
      }
      //image2 moving effect
      layer1.style.top = 800 + picY*0.6 + "px";
-     console.log("it's" + picY + "px");
-
 
       //triigger fadein effect step by step
-      title1.style.animationName = "fadeIn";
+      setTimeout(function(){
+        title1.style.animationName = "fadeIn";
+     },2000)
+
       setTimeout(function(){
        title1.style.opacity = "1";
        sec1text1.style.animationName = "fadeIn";
-      },2000)
+     },4000)
 
       setTimeout(function() {
         sec1text1.style.opacity = "1";
         sec1text2.style.animationName = "fadeIn";
-      },4000)
+      },6000)
 
       setTimeout(function() {
         sec1text2.style.opacity = "1";
         sec1text3.style.animationName = "fadeIn";
-      },6000)
-
-      setTimeout(function() {
-        sec1text3.style.opacity = "1";
-        sec1text4.style.animationName = "fadeIn";
+        sec1text3b.style.animationName = "fadeIn";
       },8000)
 
       setTimeout(function() {
+        sec1text3.style.opacity = "1";
+        sec1text3b.style.opacity = "1";
+      },9000)
+
+      setTimeout(function() {
+        sec1text4.style.animationName = "fadeIn";
+      },11000)
+
+      setTimeout(function() {
         sec1text4.style.opacity = "1";
-      },10000)
+      },13000)
+
+   //paper background disappear after certain amounts of time
+   setTimeout(function() {
+     backBox1.style.animationName = "fadeOut";
+     textsec1.style.animationName = "fadeOut";
+   },17000)
+
+   setTimeout(function() {
+     textsec1.style.opacity = "0";
+     backBox1.style.opacity = "0";
+   },19000)
 
 
     //play audio
@@ -122,11 +158,18 @@ window.onscroll = function(){
     audio2.pause();
     audio3.pause();
     // playing1 = true;
-    console.log("audio1 playing");
 
   }else if (scrollY > 2530 && scrollY < 3730 && playing2 == false) {
-    //create image3
-    //but only once
+    //create background box 2
+    if (createbg2 == false) {
+      const bg2 = document.createElement("img");
+      bg2.src = "images/oldpaper3.png";
+      bg2.className = "bg2";
+      backBox2.appendChild(bg2);
+      createbg2 = true;
+    }
+
+    //create images
      if (createImg3 == false) {
        const img3 = document.createElement("img");
        img3.src = "images/ice1.jpeg";
@@ -171,37 +214,79 @@ window.onscroll = function(){
         layer5.style.top = 1800 + picY*0.45 + "px";
 
         //triigger fadein effect step by step
-        title2.style.animationName = "fadeIn";
+        setTimeout(function(){
+           title2.style.animationName = "fadeIn";
+        },2000)
+
         setTimeout(function(){
          title2.style.opacity = "1";
          sec2text1.style.animationName = "fadeIn";
-        },2000)
+       },4000)
 
         setTimeout(function() {
           sec2text1.style.opacity = "1";
           sec2text2.style.animationName = "fadeIn";
-        },4000)
+        },6000)
 
         setTimeout(function() {
           sec2text2.style.opacity = "1";
           sec2text3.style.animationName = "fadeIn";
-        },6000)
+        },8000)
 
         setTimeout(function() {
           sec2text3.style.opacity = "1";
           sec2text4.style.animationName = "fadeIn";
-        },8000)
+        },10000)
 
         setTimeout(function() {
           sec2text4.style.opacity = "1";
-        },10000)
+        },12000)
+
+        setTimeout(function() {
+          backBox2.style.animationName = "fadeOut";
+          textsec2.style.animationName = "fadeOut";
+        },15000)
+
+        setTimeout(function() {
+          backBox2.style.opacity = "0";
+          textsec2.style.opacity = "0";
+        },17000)
+
+      var img3 = document.getElementsByClassName("img3")[0];
+      var img4 = document.getElementsByClassName("img4")[0];
+      var img5 = document.getElementsByClassName("img5")[0];
+      var img6 = document.getElementsByClassName("img6")[0];
+
+      setTimeout(function(){
+       //make image3456 visible
+       //enable fadeIn
+       img3.style.animationName = "fadeIn";
+       img4.style.animationName = "fadeIn";
+       img5.style.animationName = "fadeIn";
+       img6.style.animationName = "fadeIn";
+     },17000)
+
+    setTimeout(function(){
+      img3.style.opacity = "1";
+      img4.style.opacity = "1";
+      img5.style.opacity = "1";
+      img6.style.opacity = "1";
+    },19000)
+
 
     audio2.play();
     audio1.pause();
     audio3.pause();
-    // playing2 = true;
-    console.log("audio2 playing");
   } else if (scrollY > 3700 && scrollY < 3790 && playing3 == false) {
+    //create background box 3
+    if (createbg3 == false) {
+      const bg3 = document.createElement("img");
+      bg3.src = "images/oldpaper3.png";
+      bg3.className = "bg3";
+      backBox3.appendChild(bg3);
+      createbg3 = true;
+    }
+
     //create image7
      if (createImg7 == false) {
        const img7 = document.createElement("img");
@@ -225,36 +310,48 @@ window.onscroll = function(){
       layer7.style.top = 600+ picY*0.9 + "px";
 
       //triigger fadein effect step by step
-      title3.style.animationName = "fadeIn";
+      setTimeout(function(){
+        title3.style.animationName = "fadeIn";
+      },2000)
+
       setTimeout(function(){
        title3.style.opacity = "1";
        sec3text1.style.animationName = "fadeIn";
-      },2000)
+     },4000)
 
       setTimeout(function() {
         sec3text1.style.opacity = "1";
         sec3text2.style.animationName = "fadeIn";
-      },4000)
+      },6000)
 
       setTimeout(function() {
         sec3text2.style.opacity = "1";
         sec3text3.style.animationName = "fadeIn";
-      },6000)
+      },8000)
 
       setTimeout(function() {
         sec3text3.style.opacity = "1";
         sec3text4.style.animationName = "fadeIn";
-      },8000)
+      },10000)
 
       setTimeout(function() {
         sec3text4.style.opacity = "1";
-      },10000)
+      },12000)
+
+      setTimeout(function() {
+        backBox3.style.animationName = "fadeOut";
+        textsec3.style.animationName = "fadeOut";
+      },14000)
+
+      setTimeout(function() {
+        backBox3.style.opacity = "0";
+        textsec3.style.opacity = "0";
+      },16000)
 
     audio3.play();
     audio1.pause();
     audio2.pause();
     // playing3 = true;
-    console.log("audio3 playing");
   }
 }
 

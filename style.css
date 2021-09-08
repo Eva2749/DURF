@@ -1,8 +1,15 @@
+/* @font-face {
+src: url(fonts-eva/source-code-pro/SourceCodePro-Light.otf);
+font-family: Source Code Pro;
+} */
+
 body,html {
   height:100%;
   margin: 0;
-  /* font-family: 'Oswald'; */
-  font-family: 'PT Sans Narrow', sans-serif;
+  /* font-family: 'PT Sans Narrow', sans-serif; */
+  /* font-family: 'Gochi Hand', cursive; */
+  font-family: 'Handlee', cursive;
+  /* font-family: 'Yanone Kaffeesatz', sans-serif; */
   font-weight: 400;
 }
 
@@ -20,6 +27,7 @@ body,html {
   background-size: cover;
   opacity: 0.6;
 }
+
 
 #instruction{
   position: absolute;
@@ -57,7 +65,9 @@ body,html {
 }
 
 #welborder{
+  font-family: 'Permanent Marker', cursive;
   font-size: 80px;
+  font-weight: bold;
   letter-spacing: 2px;
   background-color: white;
   color: #000;
@@ -73,9 +83,37 @@ body,html {
 .textsec1{
   position: relative;
   padding: 20% 5%;
+  padding-top: 5%;
+  /* animation-name: fadeOut; */
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+#backBox1{
+  width: 95%;
+  height:60%;
+  position: absolute;
+  top:1400px;
+  left:11%;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  /* background-image:url('images/oldpaper3.png');
+  background-repeat: no-repeat;
+  background-size: 80%; */
+}
+
+.bg1{
+  position: relative;
+  left:-9%;
+  width: 80%;
+  height: 100%;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
 }
 
 #title1{
+  font-family: 'Lobster', cursive;
   font-size: 70px;
   color: black;
   opacity: 0;
@@ -86,8 +124,9 @@ body,html {
 
 .textsec1 span{
   font-size: 25px;
-  color: wheat;
-  background-color: #000000b3;
+  color: black;
+  /* color: wheat; */
+  /* background-color: #000000b3; */
   opacity: 0;
   /* animation-name: fadeIn; */
   animation-duration: 2s;
@@ -136,9 +175,35 @@ body,html {
 .textsec2{
   position: relative;
   padding: 10% 5%;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+#backBox2{
+  width: 75%;
+  height:55%;
+  position: absolute;
+  top:2700px;
+  left:21%;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  /* background-image:url('images/oldpaper3.png');
+  background-repeat: no-repeat;
+  background-size: 80%; */
+}
+
+.bg2{
+  position: relative;
+  left:-11%;
+  width: 70%;
+  height: 100%;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
 }
 
 #title2{
+  font-family: 'Lobster', cursive;
   font-size: 70px;
   color: black;
   opacity: 0;
@@ -149,8 +214,7 @@ body,html {
 
 .textsec2 span{
   font-size: 25px;
-  color: white;
-  background-color: #000000b3;
+  color: black;
   opacity: 0;
   /* animation-name: fadeIn; */
   animation-duration: 2s;
@@ -171,7 +235,8 @@ body,html {
    height:280px;
    position: absolute;
    left:100px;
-   animation-name: fadeIn;
+   opacity: 0;
+   /* animation-name: fadeIn; */
    animation-duration: 2s;
    animation-timing-function: ease-in;
  }
@@ -181,7 +246,8 @@ body,html {
    height:200px;
    position: absolute;
    right:100px;
-   animation-name: fadeIn;
+   opacity: 0;
+   /* animation-name: fadeIn; */
    animation-duration: 2s;
    animation-timing-function: ease-in;
  }
@@ -191,7 +257,8 @@ body,html {
    height:120px;
    position: absolute;
    left:400px;
-   animation-name: fadeIn;
+   /* animation-name: fadeIn; */
+   opacity: 0;
    animation-duration: 2s;
    animation-timing-function: ease-in;
  }
@@ -201,7 +268,8 @@ body,html {
    height:220px;
    position: absolute;
    right:300px;
-   animation-name: fadeIn;
+   opacity: 0;
+   /* animation-name: fadeIn; */
    animation-duration: 2s;
    animation-timing-function: ease-in;
  }
@@ -223,12 +291,39 @@ body,html {
  z-index: 5;
  }
 
+ #backBox3{
+   width: 95%;
+   height:55%;
+   position: absolute;
+   top:3850px;
+   left:11%;
+   animation-duration: 2s;
+   animation-timing-function: ease-in-out;
+   /* background-image:url('images/oldpaper3.png');
+   background-repeat: no-repeat;
+   background-size: 80%; */
+ }
+
  .textsec3{
    position: relative;
    padding: 10% 5%;
+   animation-duration: 2s;
+   animation-timing-function: ease-in-out;
  }
 
+ .bg3{
+   position: relative;
+   left:-9%;
+   width: 80%;
+   height: 100%;
+   animation-name: fadeIn;
+   animation-duration: 2s;
+   animation-timing-function: ease-in;
+ }
+
+
  #title3{
+   font-family: 'Lobster', cursive;
    font-size: 70px;
    color: black;
    opacity: 0;
@@ -239,8 +334,7 @@ body,html {
 
  .textsec3 span{
    font-size: 25px;
-   color: #eabc8c;
-   background-color: #1d1c12b3;
+   color: black;
    opacity: 0;
    /* animation-name: fadeIn; */
    animation-duration: 2s;
@@ -272,6 +366,12 @@ body,html {
   from { opacity: 0; }
     to { opacity: 1; }
 }
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+    to { opacity: 0; }
+}
+
 
 
 /* .content {

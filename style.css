@@ -366,7 +366,8 @@ body,html {
 #returnBox{
   position: relative;
   left:-590px;
-  top:460px;
+  top:450px;
+  cursor: pointer;
 }
 
 #return{
@@ -375,7 +376,6 @@ body,html {
   /* background-color: black; */
   opacity: 0;
   animation: blinker 1.5s linear infinite;
-  cursor: pointer;
 }
 
 @keyframes fadeIn {

@@ -47,7 +47,8 @@ var audio1 = document.getElementById('audio1');
 var audio2 = document.getElementById('audio2');
 var audio3 = document.getElementById('audio3');
 
-var returnButton = document.getElementById("return");
+var returnButton = document.getElementById("returnBox");
+var returnContent = document.getElementById("return");
 
 //onscroll could help continuously update y position of mouse
 window.onscroll = function(){
@@ -347,7 +348,7 @@ window.onscroll = function(){
       setTimeout(function() {
         backBox3.style.opacity = "0";
         textsec3.style.opacity = "0";
-        returnButton.style.opacity = "1";
+        returnContent.style.opacity = "1";
       },16000)
 
     audio3.play();

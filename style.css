@@ -32,8 +32,9 @@ body,html {
 #instruction{
   position: absolute;
   top:750px;
-  left:44%;
-  font-size: 20px;
+  left:40%;
+  font-size: 25px;
+  font-weight: bold;
   color: white;
   animation: blinker 1.5s linear infinite;
 }
@@ -360,6 +361,21 @@ body,html {
   animation-name: fadeIn;
   animation-duration: 2s;
   animation-timing-function: ease-in;
+}
+
+#returnBox{
+  position: relative;
+  left:-590px;
+  top:460px;
+}
+
+#return{
+  font-size: 30px;
+  color:white;
+  /* background-color: black; */
+  opacity: 0;
+  animation: blinker 1.5s linear infinite;
+  cursor: pointer;
 }
 
 @keyframes fadeIn {
